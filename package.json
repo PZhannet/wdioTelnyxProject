@@ -26,7 +26,7 @@
         "wdio:firefoxUI": "wdio run ./config/wdio.conf.UIfirefox.js",
         "wdio:chromeUI": "wdio run ./config/wdio.conf.UIchrome.js",
         "allure:serve": "npx allure serve allure-results",
-        "allure:generate": "npx allure generate allure-results --clean -o ./docs && allure open ./docs",
+        "allure:generate": "npx allure generate allure-results --clean && allure open",
         "docker:build":"docker-compose -f ./docker/docker-compose.yml up -d"
     },
     "dependencies": {

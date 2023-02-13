@@ -3,13 +3,13 @@
 - Created 20 tests in WebdriverIO for testing the Telnyx website: https://telnyx.com/
 
 ## Technologies
-- Node.js: 16.14.2
+- Node.js: 18.12.1
 - Java 8 or above
 - Docker desktop app
 - JDK 17
 
 ## Project set up
-1. Clone the project `git clone https://github.com/PZhannet/WebdriverIO-Telnyx`
+1. Clone the project `git clone https://github.com/PZhannet/wdioTelnyxProject`
 2. Move to the 5.1WebdriverIoTelnyx folder `cd -5.1WebdriverIoTelnyx`
 3. Run `npm i` (install node.js dependencies)
 
@@ -34,6 +34,14 @@ ENV=prod|dev  npx wdio run ./config/wdio.conf.chrome.js --spec ./test/specs/{nam
 ```sh
 ENV=prod|dev npx wdio run ./config/wdio.conf.firefox.js --spec ./test/specs/{name}.e2e.js  
 ```
+- To run single test in Chrome browser:  
+```sh
+ENV=prod|dev  npx wdio run ./config/wdio.conf.UIchrome.js --spec ./test/specs/{name}.e2e.js  
+```
+- To run single test in Firefox browser:  
+```sh
+ENV=prod|dev npx wdio run ./config/wdio.conf.UIfirefox.js --spec ./test/specs/{name}.e2e.js  
+```
 - Generate and open allure report:  
 ```sh
 npm run allure:generate  
@@ -51,6 +59,6 @@ ENV=prod|dev npm run wdio:docker
 ## GitHub Pages:
 
 To see the automatically generated HTML report with test execution:
-- <a href="https://pzhannet.github.io/WebdriverIO-Telnyx/"> Report </a>
+- <a href="https://pzhannet.github.io/wdioTelnyxProject/"> Report </a>
 
 

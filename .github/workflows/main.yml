@@ -12,7 +12,7 @@ jobs:
         with:
           node-version: 18
       
-      - name: Install
+      - name: Install ci
         run: npm ci
       
       - name: Run test

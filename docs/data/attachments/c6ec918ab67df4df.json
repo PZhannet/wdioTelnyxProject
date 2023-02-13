@@ -1,5 +1,0 @@
-{
-  "error": "no such element",
-  "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"[class*=\"tx-2jo5gH tx-AYjdp\"]\"}\n  (Session info: headless chrome=109.0.5414.121)",
-  "stacktrace": "Backtrace:\n\t(No symbol) [0x007F6643]\n\t(No symbol) [0x0078BE21]\n\t(No symbol) [0x0068DA9D]\n\t(No symbol) [0x006C1342]\n\t(No symbol) [0x006C147B]\n\t(No symbol) [0x006F8DC2]\n\t(No symbol) [0x006DFDC4]\n\t(No symbol) [0x006F6B09]\n\t(No symbol) [0x006DFB76]\n\t(No symbol) [0x006B49C1]\n\t(No symbol) [0x006B5E5D]\n\tGetHandleVerifier [0x00A6A142+2497106]\n\tGetHandleVerifier [0x00A985D3+2686691]\n\tGetHandleVerifier [0x00A9BB9C+2700460]\n\tGetHandleVerifier [0x008A3B10+635936]\n\t(No symbol) [0x00794A1F]\n\t(No symbol) [0x0079A418]\n\t(No symbol) [0x0079A505]\n\t(No symbol) [0x007A508B]\n\tBaseThreadInitThunk [0x76107D69+25]\n\tRtlInitializeExceptionChain [0x77D5BB9B+107]\n\tRtlClearBits [0x77D5BB1F+191]\n"
-}
