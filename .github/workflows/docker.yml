@@ -1,0 +1,22 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Run docker compose
+      run: npm run docker:build
+    - name: Install
+      run: npm ci
+    - name: Run tests
+      run: ENV=dev npm run wdio:docker
