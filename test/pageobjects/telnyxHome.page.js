@@ -21,11 +21,11 @@ class TelnyxHomePage extends Page {
             this.acceptAndCloseBtn.click();
         }
     }
-    async clickLoginBtn(title){
+    async clickLoginBtn(url,title){
         await this.loginBtn.waitForExist({ timeout: 10000 })
         await this.loginBtn.click();
         setTimeout(async function () {
-            await browser.toHaveUrlContaining('/sign-in')
+            await browser.toHaveUrlContaining(url)
           }, 10000);
         await this.switchActiveWindow(title)
         await expect(browser).toHaveTitle(title)
@@ -70,7 +70,6 @@ class TelnyxHomePage extends Page {
         await this.exploreWirelessLink.click()
         await expect(browser).toHaveTitle(title)
     }
-    
 }
 
 module.exports = new TelnyxHomePage()

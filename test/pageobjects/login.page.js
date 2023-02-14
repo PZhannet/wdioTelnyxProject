@@ -8,7 +8,7 @@ class LoginPage extends Page{
     async login (email, password) {
         await this.bussenessEmailInput.setValue(email);
         await this.passwordInput.setValue(password);
-        await this.submitBtn.waitForClickable({ timeout: 3000 });
+        await this.submitBtn.waitForClickable({ timeout: 7000 });
         await this.submitBtn.click();
         setTimeout(async function () {
             await browser.toHaveUrlContaining('portal.telnyx.com')

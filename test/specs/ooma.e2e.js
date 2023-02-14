@@ -9,6 +9,6 @@ describe('Testing the blog page', () => {
     })
     it('ID 15 Сheck the functionality of the "Talk to an expert" reference on the Ooma page', async()=>{
         await telnyxHomePage.clickReadCustomerStoryLink(data.titleOomaPage)
-        await oomaPage.clickTalkToAnExpertBtn(data.titleTalkToAnExpertPage)
+        await oomaPage.clickTalkToAnExpertBtn(data.urlTalkToAnExpert)
     })
 })

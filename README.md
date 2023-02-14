@@ -56,6 +56,14 @@ npm run docker:build
 ```sh
 ENV=prod|dev npm run wdio:docker  
 ```
+-To stop docker after test running:
+```sh
+ctrl+C 
+```
+-To remove docker after test running:
+```sh
+docker-compose -f ./docker/docker-compose.yml down
+```
 ## GitHub Pages:
 
 To see the automatically generated HTML report with test execution:

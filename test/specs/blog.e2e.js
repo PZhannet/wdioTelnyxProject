@@ -8,7 +8,6 @@ describe('Testing the blog page', () => {
         await portalTelnyxPage.clickAcceptAndCloseBtn();
     })
     it('ID 11 Check ability to filter news by product on the "Blog" page', async()=>{
-        await browser.setWindowSize(1920,1080)
         await portalTelnyxPage.hoverResourcesMenuItem()
         await portalTelnyxPage.clickBlogInPopupMenu(data.titleBlogPage)
         await blogPage.clickMessagesBtn()

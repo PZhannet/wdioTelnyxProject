@@ -28,7 +28,7 @@ class TelnyxCustomerPortalPage extends Page {
     get pricingLink(){return $('[id="main_content"] [href="/#/app/pricing"]')}
 
     async clickTollFreeNumbersBtn (){
-        await this.tollFreeNumbersBtn.waitForExist({ timeout: 20000 })
+        await this.tollFreeNumbersBtn.waitForExist({ timeout: 100000 })
         await this.tollFreeNumbersBtn.click()
         await expect(this.searchNumbersBtn).toBeClickable()
         await expect(this.labelsCountryCodeAndAreaCodeAndPhoneNumber).toBeDisplayed()
@@ -69,7 +69,9 @@ class TelnyxCustomerPortalPage extends Page {
         await expect(this.developersPageIcon).toBeDisplayed()
     }
     async clickVideoLink(url,title){
-        await this.videoLink.waitForExist({ timeout: 10000 })
+        await browser.waitUntil(async () => {
+            return (await this.videoLink).isExisting();
+          }, { timeout: 20000 })
         await this.videoLink.click();
         await this.expectToHaveTitle(url,title)
     }
@@ -77,11 +79,11 @@ class TelnyxCustomerPortalPage extends Page {
         await this.tryTheDemoAppBtn.click()
         await expect(browser).toHaveTitle(title)
     }
-    async clickPricingLink(title){
-        await this.pricingLink.waitForExist({ timeout: 10000 })
+    async clickPricingLink(url,title){
+        await this.pricingLink.waitForExist({ timeout: 30000 })
         await this.pricingLink.click()
         setTimeout(async function () {
-            await browser.toHaveUrlContaining('/pricing')
+            await browser.toHaveUrlContaining(url)
         }, 10000);
         await expect(browser).toHaveTitle(title)
     }

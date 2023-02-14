@@ -8,7 +8,7 @@ describe('My Cart page', () => {
     before('should login with valid credentials', async () => {
         await telnyxHomePage.open();
         await telnyxHomePage.clickAcceptAndCloseBtn();
-        await telnyxHomePage.clickLoginBtn(data.titleLoginPage);
+        await telnyxHomePage.clickLoginBtn(data.urlLoginPage,data.titleLoginPage);
         await login.login(data.validEmailForLogin,data.validPasswordForLogin)
         await portalTelnyxPage.clickTollFreeNumbersBtn() 
         await portalTelnyxPage.clickSearchNumbersBtn()

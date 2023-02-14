@@ -8,11 +8,11 @@ describe('Testing the Login page', () => {
         await telnyxHomePage.clickAcceptAndCloseBtn();
     })
     it('ID 19 Check the Sign-up link on the Login page opens the Sign-up page', async()=>{
-        await telnyxHomePage.clickLoginBtn(data.titleLoginPage)
+        await telnyxHomePage.clickLoginBtn(data.urlLoginPage,data.titleLoginPage)
         await loginPage.clickSignUpLink(data.titleSignUpPage)
     })
     it('ID 20 Check the Log in with Microsoft button on the Login page opens the Microsoft Sign in page', async()=>{
-        await telnyxHomePage.clickLoginBtn(data.titleLoginPage)
+        await telnyxHomePage.clickLoginBtn(data.urlLoginPage,data.titleLoginPage)
         await loginPage.clickLoginWithMicrosoftBtn(data.titleLoginWithMicrosof)
     })
 })
