@@ -4,9 +4,9 @@ class TelnyxCustomerPortalPage extends Page {
     get tollFreeNumbersBtn (){return $('[class*=" kKRPik"]')}
     get searchNumbersBtn(){return $('[class*="QRlWQ"]')}
     get labelsCountryCodeAndAreaCodeAndPhoneNumber(){return $('.Label-eJsipv')}
-    get identityLink(){return $('(//button[contains(@class, "SideBarNav__Button")])[10]')}
-    get verifyLink(){return $('(//*[@href="/#/app/verify/profiles"])[2]')}
-    get numberLookupLink(){return $('(//*[@href="/#/app/lookup"])[2]')}
+    get identityLink(){return $("//*[@aria-label='Main menu'] /descendant:: button [contains(text(),'Identity')]")}
+    get verifyLink(){return $('//*[@aria-label="Main menu"] /descendant::button[contains(text(),"Verify")]')}
+    get numberLookupLink(){return $("//*[@aria-label='Main menu'] /descendant::button[contains(text(),'Number Lookup')]")}
     get tableOfNumbers(){return $('[class="tx-Z2wPgxt"]>table')}
     get numberAddedToCart(){return $('//tr[1]/td[2]')}
     get addToCartBtn(){return $('//tr[1]/td/button[contains(text(),"Add to Cart")]')}
@@ -34,19 +34,23 @@ class TelnyxCustomerPortalPage extends Page {
         await expect(this.labelsCountryCodeAndAreaCodeAndPhoneNumber).toBeDisplayed()
     }
     async clickIdentityLink(){
+        await this.identityLink.waitForExist({ timeout: 100000 })
         await this.identityLink.click()
         await expect(this.verifyLink).toBeDisplayed()
         await expect(this.numberLookupLink).toBeDisplayed()
     }
     async clickSearchNumbersBtn(){
+        await this.searchNumbersBtn.waitForExist({ timeout: 100000 })
         await this.searchNumbersBtn.click()
         await expect(this.tableOfNumbers).toBeDisplayed()
     }
     async clickAddToCartBtn(){
+        await this.addToCartBtn.waitForExist({ timeout: 100000 })
         await this.addToCartBtn.click();
         await expect(this.successMessage).toBeDisplayed();
     }
     async clickCartBtn(number){
+        await this.cartBtn.waitForExist({ timeout: 100000 })
         await this.cartBtn.click();
         await expect(this.cartTitle).toHaveText('My Cart');
         await expect(this.numberInTheCart).toHaveText(number);
@@ -63,6 +67,7 @@ class TelnyxCustomerPortalPage extends Page {
         await expect(this.shortcutsSection).toBeDisplayed()
     }
     async clickStartMessagingLink(title){
+        await this.startMessagingLink.waitForExist({ timeout: 100000 })
         await this.startMessagingLink.click()
         await browser.pause(10000)
         await this.switchActiveWindow(title)
@@ -76,6 +81,7 @@ class TelnyxCustomerPortalPage extends Page {
         await this.expectToHaveTitle(url,title)
     }
     async clickTryTheDemoAppBtn(title){
+        await this.tryTheDemoAppBtn.waitForExist({ timeout: 100000 })
         await this.tryTheDemoAppBtn.click()
         await expect(browser).toHaveTitle(title)
     }
