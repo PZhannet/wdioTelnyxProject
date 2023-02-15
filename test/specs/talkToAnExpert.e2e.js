@@ -2,7 +2,7 @@ const talkToAnExpertPage = require('../pageobjects/talkToAnExpert.page')
 const telnyxHomePage = require('../pageobjects/telnyxHome.page');
 const data = require('../support/data')
 
-describe('Testing the blog page', () => {
+describe('Testing the Talk to an Expert page', () => {
     before('Open Telnyx page and Accept cookies', async () => {
         await browser.setWindowSize(1920,1080)
         await telnyxHomePage.open();

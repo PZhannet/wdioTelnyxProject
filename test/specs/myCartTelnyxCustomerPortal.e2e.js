@@ -3,7 +3,7 @@ const login = require('../pageobjects/login.page')
 const myCartTelnyxCustomerPortalPage = require('../pageobjects/myCartTelnyxCustomerPortal.page')
 const portalTelnyxPage = require('../pageobjects/telnyxCustomerPortal.page')
 const data = require('../support/data')
-describe('My Cart page', () => {
+describe('Testing My Cart page in Telnyx Customer Portal', () => {
     let number=""
     before('should login with valid credentials', async () => {
         await telnyxHomePage.open();

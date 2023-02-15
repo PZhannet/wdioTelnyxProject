@@ -2,7 +2,7 @@ const oomaPage = require('../pageobjects/ooma.page')
 const telnyxHomePage = require('../pageobjects/telnyxHome.page');
 const data = require('../support/data')
 
-describe('Testing the blog page', () => {
+describe('Testing the Ooma page', () => {
     before('Open Telnyx page and Accept cookies', async () => {
         await telnyxHomePage.open();
         await telnyxHomePage.clickAcceptAndCloseBtn();

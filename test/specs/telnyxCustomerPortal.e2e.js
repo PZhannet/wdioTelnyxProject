@@ -3,7 +3,7 @@ const login = require('../pageobjects/login.page')
 const portalTelnyxPage = require('../pageobjects/telnyxCustomerPortal.page') 
 const data = require('../support/data')
 
-describe('My Login application', () => {
+describe('Testing Telnyx Customer Portal page', () => {
     before('should login with valid credentials', async () => {
         await telnyxHomePage.open();
         await telnyxHomePage.clickAcceptAndCloseBtn();

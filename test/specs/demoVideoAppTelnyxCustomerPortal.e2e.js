@@ -4,7 +4,7 @@ const telnyxCustomerPortalPage = require('../pageobjects/telnyxCustomerPortal.pa
 const demoVideoAppPageTelnyxCustomerPortalPage = require('../pageobjects/demoVideoAppTelnyxCustomerPortal.page')
 const data = require('../support/data')
 
-describe('Testing the Demo Video App page', () => {
+describe('Testing the Demo Video App page in Telnyx Customer Portal', () => {
     before('should login with valid credentials', async () => {
         await telnyxHomePage.open();
         await telnyxHomePage.clickAcceptAndCloseBtn();
