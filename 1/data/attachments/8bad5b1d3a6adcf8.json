@@ -1,5 +1,0 @@
-{
-  "error": "no such element",
-  "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"[id=\"main_content\"] [href=\"/#/app/home\"]\"}\n  (Session info: headless chrome=109.0.5414.119)",
-  "stacktrace": "#0 0x556de2a06303 <unknown>\n#1 0x556de27dad37 <unknown>\n#2 0x556de28175b2 <unknown>\n#3 0x556de28176c1 <unknown>\n#4 0x556de2851b34 <unknown>\n#5 0x556de28379ad <unknown>\n#6 0x556de284f88c <unknown>\n#7 0x556de2837753 <unknown>\n#8 0x556de280aa14 <unknown>\n#9 0x556de280bb7e <unknown>\n#10 0x556de2a5532e <unknown>\n#11 0x556de2a58c0e <unknown>\n#12 0x556de2a3b610 <unknown>\n#13 0x556de2a59c23 <unknown>\n#14 0x556de2a2d545 <unknown>\n#15 0x556de2a7a6a8 <unknown>\n#16 0x556de2a7a836 <unknown>\n#17 0x556de2a95d13 <unknown>\n#18 0x7f1025dfbb43 <unknown>\n"
-}
