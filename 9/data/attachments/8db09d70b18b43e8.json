@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//*[@aria-label=\"Main menu\"] /descendant::button[contains(text(),\"Verify\")]"
+}
