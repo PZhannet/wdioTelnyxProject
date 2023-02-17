@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//*[@class=\"LoginOAuth__OAuthButtonLabel-chtDdO iRdMaw\"][contains(text(),\"Microsoft\")]"
+}
