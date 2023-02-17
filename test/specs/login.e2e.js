@@ -12,6 +12,7 @@ describe('Testing the Login page', () => {
         await loginPage.clickSignUpLink(data.titleSignUpPage)
     })
     it('ID 20 Check the Log in with Microsoft button on the Login page opens the Microsoft Sign in page', async()=>{
+        await browser.setWindowSize(1920,1080)
         await telnyxHomePage.clickLoginBtn(data.urlLoginPage,data.titleLoginPage)
         await loginPage.clickLoginWithMicrosoftBtn(data.titleLoginWithMicrosof)
     })

@@ -14,6 +14,7 @@
 3. Run `npm i` (install node.js dependencies)
 
 ## Usage
+### To run test in bash
 - To run tests in headless mode in Chrome and Firefox browsers:  
 ```sh
 ENV=prod|dev npm run wdio  
@@ -42,6 +43,36 @@ ENV=prod|dev  npx wdio run ./config/wdio.conf.UIchrome.js --spec ./test/specs/{n
 ```sh
 ENV=prod|dev npx wdio run ./config/wdio.conf.UIfirefox.js --spec ./test/specs/{name}.e2e.js  
 ```
+### To run tests in powershall
+- To run tests in headless mode in Chrome and Firefox browsers:  
+```sh
+$env:ENV=`'prod'`|`'dev'`; npm run wdio  
+```
+- To run tests in headless mode in Chrome browser:  
+```sh
+$env:ENV=`'prod'`|`'dev'`; npm run wdio:chrome  
+```
+- To run tests in headless mode in Firefox browser:  
+```sh
+$env:ENV=`'prod'`|`'dev'`; npm run wdio:firefox  
+```
+- To run single test in headless mode in Chrome browser:  
+```sh
+$env:ENV=`'prod'`|`'dev'`;  npx wdio run ./config/wdio.conf.chrome.js --spec ./test/specs/{name}.e2e.js  
+```
+- To run single test in headless mode in Firefox browser:  
+```sh
+$env:ENV=`'prod'`|`'dev'`; npx wdio run ./config/wdio.conf.firefox.js --spec ./test/specs/{name}.e2e.js  
+```
+- To run single test in Chrome browser:  
+```sh
+$env:ENV=`'prod'`|`'dev'`;  npx wdio run ./config/wdio.conf.UIchrome.js --spec ./test/specs/{name}.e2e.js  
+```
+- To run single test in Firefox browser:  
+```sh
+$env:ENV=`'prod'`|`'dev'`; npx wdio run ./config/wdio.conf.UIfirefox.js --spec ./test/specs/{name}.e2e.js  
+```
+## Allure report
 - Generate and open allure report:  
 ```sh
 npm run allure:generate  
